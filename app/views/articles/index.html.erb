@@ -1,8 +1,9 @@
-#Titulo da página
+<!-- Exibe o título da página -->
 <h1>Articles</h1>
-<% @articles.each do |article| %>
-  <li>
-    <h2><% article.title %></h2>
-    <p><%= article.body  %></p>
-  </li>
-  <% end %>
+<ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+</ul>
