@@ -1,9 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
-  end
-
-  def show
-  @article = Article.find(params[:id])
+    #Busca todos artigos ordenados por data
+    @articles = Article.all.order(created_at: :desc)
   end
 end
